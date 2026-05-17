@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Therese Marzouk — Speaker</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --magenta:#D600D6;
+  --bot-green:#78A53C;
+  --dk-violet:#692D69;
+  --bruised-plum:#5A2D4B;
+  --deep-canopy:#425233;
+  --raw-linen:#F5ECE2;
+  --aged-parch:#C8C4B0;
+  --forest-shadow:#1E2828;
+  --deep-canopy-dk:#2D3C1E;
+  --night-plum:#3C1E3C;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --mono:'Space Mono',monospace;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--forest-shadow);color:var(--raw-linen);font-family:var(--serif);overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 48px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(30,40,40,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(200,196,176,0.12);
+}
+.nav-logo{
+  font-family:var(--serif);font-size:13px;font-weight:600;
+  letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--raw-linen);text-decoration:none;
+}
+.nav-logo span{color:var(--magenta)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--aged-parch);
+  text-decoration:none;transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--magenta)}
+.nav-cta{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;padding:8px 20px;
+  border:1px solid var(--magenta);color:var(--magenta);
+  background:transparent;cursor:pointer;text-decoration:none;
+  transition:all 0.2s;
+}
+.nav-cta:hover{background:var(--magenta);color:var(--raw-linen)}
+
+/* PAGE SECTIONS */
+.page{min-height:100vh;padding-top:70px}
+
+/* ═══ PAGE 1 — HOMEPAGE ═══ */
+#home{
+  background:var(--forest-shadow);
+  position:relative;overflow:hidden;
+}
+
+.home-hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:stretch;
+}
+
+.hero-left{
+  padding:100px 64px 80px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  border-right:1px solid rgba(200,196,176,0.1);
+}
+
+.hero-eyebrow{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--bot-green);
+  margin-bottom:32px;
+}
+
+.hero-headline{
+  font-size:clamp(48px,5.5vw,80px);
+  font-weight:300;line-height:1.05;
+  color:var(--raw-linen);
+  margin-bottom:8px;
+}
+.hero-headline em{
+  font-style:italic;color:var(--magenta);
+  display:block;
+}
+.hero-headline .line-3{
+  font-size:clamp(36px,4vw,60px);
+  color:var(--aged-parch);
+  font-weight:300;
+}
+
+.hero-rule{
+  width:48px;height:1px;
+  background:var(--magenta);
+  margin:32px 0;
+}
+
+.hero-sub{
+  font-size:18px;font-weight:300;font-style:italic;
+  color:var(--aged-parch);line-height:1.7;
+  max-width:400px;margin-bottom:48px;
+}
+.hero-sub strong{
+  font-style:normal;font-weight:600;
+  color:var(--raw-linen);
+}
+
+.hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.btn-primary{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.15em;
+  text-transform:uppercase;padding:14px 32px;
+  background:var(--magenta);color:var(--raw-linen);
+  border:none;cursor:pointer;text-decoration:none;
+  transition:all 0.2s;display:inline-block;
+}
+.btn-primary:hover{background:var(--dk-violet)}
+.btn-ghost{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.15em;
+  text-transform:uppercase;padding:14px 32px;
+  background:transparent;color:var(--aged-parch);
+  border:1px solid rgba(200,196,176,0.3);cursor:pointer;
+  text-decoration:none;transition:all 0.2s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--raw-linen);color:var(--raw-linen)}
+
+.hero-right{
+  background:var(--night-plum);
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:64px;
+}
+.hero-img-placeholder{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,var(--night-plum) 0%,var(--deep-canopy-dk) 100%);
+  display:flex;align-items:center;justify-content:center;
+}
+.hero-img-text{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:rgba(200,196,176,0.3);
+  text-align:center;
+}
+.hero-caption{
+  position:relative;z-index:2;
+  border-left:2px solid var(--magenta);
+  padding:16px 20px;
+  background:rgba(30,40,40,0.85);
+}
+.hero-caption p{
+  font-size:14px;font-style:italic;
+  color:var(--aged-parch);line-height:1.6;
+}
+.hero-caption cite{
+  display:block;margin-top:8px;
+  font-family:var(--mono);font-size:9px;
+  letter-spacing:0.12em;color:var(--bot-green);
+  font-style:normal;
+}
+
+/* Logo bar */
+.logo-bar{
+  padding:40px 64px;
+  border-top:1px solid rgba(200,196,176,0.08);
+  border-bottom:1px solid rgba(200,196,176,0.08);
+}
+.logo-bar-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.25em;
+  text-transform:uppercase;color:rgba(200,196,176,0.4);
+  margin-bottom:20px;
+}
+.logo-bar-logos{
+  display:flex;gap:48px;align-items:center;flex-wrap:wrap;
+}
+.logo-item{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.18em;
+  text-transform:uppercase;color:rgba(200,196,176,0.35);
+  border:1px solid rgba(200,196,176,0.12);
+  padding:6px 14px;
+}
+
+/* Philosophy strip */
+.philosophy-strip{
+  background:var(--dk-violet);
+  padding:64px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:48px;
+}
+.phil-item{}
+.phil-number{
+  font-family:var(--mono);font-size:32px;font-weight:700;
+  color:var(--magenta);opacity:0.4;
+  margin-bottom:12px;
+}
+.phil-title{
+  font-size:22px;font-weight:300;font-style:italic;
+  color:var(--raw-linen);margin-bottom:10px;
+  line-height:1.2;
+}
+.phil-body{
+  font-size:14px;font-weight:300;
+  color:var(--aged-parch);line-height:1.65;
+}
+
+/* Testimonial hero */
+.testimonial-hero{
+  padding:100px 64px;
+  background:var(--deep-canopy);
+  position:relative;
+}
+.testimonial-hero::before{
+  content:'\201C';
+  position:absolute;top:40px;left:48px;
+  font-size:200px;color:var(--bot-green);
+  opacity:0.15;font-family:var(--serif);
+  line-height:1;
+}
+.testimonial-hero blockquote{
+  max-width:720px;margin:0 auto;
+  font-size:clamp(22px,3vw,32px);
+  font-weight:300;font-style:italic;
+  color:var(--raw-linen);line-height:1.45;
+  position:relative;z-index:1;
+}
+.testimonial-hero cite{
+  display:block;margin-top:24px;
+  font-family:var(--mono);font-size:10px;
+  letter-spacing:0.15em;color:var(--bot-green);
+  font-style:normal;text-transform:uppercase;
+}
+
+/* ═══ PAGE 2 — ABOUT ═══ */
+#about{
+  background:var(--raw-linen);
+  color:var(--forest-shadow);
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:100vh;
+}
+.about-left{
+  background:var(--forest-shadow);
+  padding:100px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.about-img-block{
+  width:100%;
+  aspect-ratio:3/4;
+  background:linear-gradient(180deg,var(--night-plum) 0%,var(--deep-canopy-dk) 100%);
+  margin-bottom:32px;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.about-img-placeholder-text{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.2em;
+  text-transform:uppercase;color:rgba(200,196,176,0.25);
+}
+.about-img-caption{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--bot-green);
+}
+
+.about-right{
+  padding:100px 64px;
+  background:var(--raw-linen);
+}
+.section-eyebrow{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--deep-canopy);
+  margin-bottom:20px;
+}
+.section-headline{
+  font-size:clamp(36px,4vw,56px);
+  font-weight:300;line-height:1.1;
+  color:var(--forest-shadow);
+  margin-bottom:8px;
+}
+.section-headline em{
+  font-style:italic;color:var(--dk-violet);
+}
+.section-rule{
+  width:48px;height:1px;
+  background:var(--magenta);
+  margin:28px 0;
+}
+.about-body{
+  font-size:17px;font-weight:300;
+  color:var(--forest-shadow);line-height:1.8;
+  margin-bottom:20px;
+}
+.about-body strong{
+  font-weight:600;color:var(--forest-shadow);
+}
+.about-pullquote{
+  border-left:3px solid var(--magenta);
+  padding:20px 24px;
+  background:rgba(30,40,40,0.06);
+  margin:32px 0;
+}
+.about-pullquote p{
+  font-size:20px;font-style:italic;font-weight:300;
+  color:var(--forest-shadow);line-height:1.5;
+}
+.credential-row{
+  display:flex;gap:32px;margin-top:40px;flex-wrap:wrap;
+}
+.credential{
+  display:flex;flex-direction:column;gap:4px;
+}
+.cred-number{
+  font-family:var(--mono);font-size:28px;font-weight:700;
+  color:var(--magenta);
+}
+.cred-label{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--deep-canopy);
+}
+
+/* ═══ PAGE 3 — KEYNOTE ═══ */
+#keynote{background:var(--forest-shadow)}
+.keynote-hero{
+  padding:120px 64px 80px;
+  display:grid;grid-template-columns:5fr 4fr;
+  gap:80px;align-items:start;
+  border-bottom:1px solid rgba(200,196,176,0.1);
+}
+.keynote-tag{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--magenta);
+  margin-bottom:16px;
+}
+.keynote-title{
+  font-size:clamp(40px,5vw,72px);
+  font-weight:300;line-height:1.05;
+  color:var(--raw-linen);margin-bottom:8px;
+}
+.keynote-title em{
+  font-style:italic;color:var(--magenta);
+}
+.keynote-subtitle{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--aged-parch);
+  margin-bottom:32px;opacity:0.7;
+}
+.keynote-description{
+  font-size:17px;font-weight:300;font-style:italic;
+  color:var(--aged-parch);line-height:1.8;
+  margin-bottom:32px;
+}
+.keynote-description strong{
+  font-style:normal;font-weight:600;color:var(--raw-linen);
+}
+.keynote-sidebar{
+  padding-top:24px;
+}
+.sidebar-block{
+  background:var(--night-plum);
+  padding:28px;
+  margin-bottom:16px;
+}
+.sidebar-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--bot-green);
+  margin-bottom:12px;
+}
+.sidebar-list{
+  list-style:none;
+}
+.sidebar-list li{
+  font-size:14px;font-weight:300;font-style:italic;
+  color:var(--aged-parch);line-height:1.6;
+  padding:6px 0;
+  border-bottom:1px solid rgba(200,196,176,0.1);
+}
+.sidebar-list li:last-child{border-bottom:none}
+.sidebar-list li::before{
+  content:'→ ';color:var(--magenta);font-style:normal;
+}
+
+.takeaways-section{
+  padding:80px 64px;
+  background:var(--deep-canopy-dk);
+}
+.takeaway-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:40px;
+}
+.takeaway-card{
+  background:rgba(30,40,40,0.5);
+  padding:28px;
+  border-top:2px solid var(--magenta);
+}
+.takeaway-num{
+  font-family:var(--mono);font-size:24px;font-weight:700;
+  color:var(--magenta);opacity:0.3;margin-bottom:12px;
+}
+.takeaway-text{
+  font-size:15px;font-weight:300;font-style:italic;
+  color:var(--raw-linen);line-height:1.55;
+}
+
+/* ═══ PAGE 4 — FOR EVENT PLANNERS ═══ */
+#planners{background:var(--raw-linen);color:var(--forest-shadow)}
+.planners-hero{
+  padding:120px 64px 80px;
+  border-bottom:1px solid rgba(30,40,40,0.1);
+}
+.planners-intro{
+  max-width:640px;
+}
+.planners-grid{
+  display:grid;grid-template-columns:3fr 2fr;
+  gap:80px;padding:80px 64px;
+}
+.what-you-get{}
+.wg-title{
+  font-size:28px;font-weight:300;font-style:italic;
+  color:var(--forest-shadow);margin-bottom:24px;
+}
+.wg-item{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:20px 0;border-bottom:1px solid rgba(30,40,40,0.08);
+}
+.wg-item:last-child{border-bottom:none}
+.wg-icon{
+  width:32px;height:32px;
+  background:var(--forest-shadow);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  font-family:var(--mono);font-size:10px;color:var(--magenta);
+  font-weight:700;
+}
+.wg-content{}
+.wg-label{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--deep-canopy);
+  margin-bottom:4px;
+}
+.wg-desc{
+  font-size:15px;font-weight:300;
+  color:var(--forest-shadow);line-height:1.55;
+}
+
+.fee-block{
+  background:var(--forest-shadow);
+  padding:40px;
+  align-self:start;
+  position:sticky;top:90px;
+}
+.fee-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--bot-green);
+  margin-bottom:8px;
+}
+.fee-amount{
+  font-size:48px;font-weight:300;color:var(--raw-linen);
+  margin-bottom:4px;
+}
+.fee-note{
+  font-family:var(--mono);font-size:9px;
+  color:var(--aged-parch);margin-bottom:24px;
+  line-height:1.5;
+}
+.fee-divider{
+  height:1px;background:rgba(200,196,176,0.15);
+  margin:24px 0;
+}
+.fee-terms-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--aged-parch);
+  margin-bottom:12px;
+}
+.fee-term{
+  font-size:13px;font-style:italic;
+  color:var(--aged-parch);line-height:1.6;
+  padding:6px 0;
+  border-bottom:1px solid rgba(200,196,176,0.08);
+}
+.fee-term:last-of-type{border:none}
+
+/* Testimonial strip for planners */
+.testimonial-strip{
+  background:var(--dk-violet);
+  padding:64px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:40px;
+}
+.tstrip-item{}
+.tstrip-quote{
+  font-size:16px;font-style:italic;font-weight:300;
+  color:var(--raw-linen);line-height:1.6;
+  margin-bottom:16px;
+}
+.tstrip-attr{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--bot-green);
+}
+
+/* ═══ PAGE 5 — CONTACT ═══ */
+#contact{background:var(--night-plum)}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  min-height:100vh;
+}
+.contact-left{
+  padding:120px 64px;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:1px solid rgba(200,196,176,0.1);
+}
+.contact-headline{
+  font-size:clamp(36px,4vw,56px);
+  font-weight:300;line-height:1.1;
+  color:var(--raw-linen);margin-bottom:24px;
+}
+.contact-headline em{
+  font-style:italic;color:var(--magenta);
+}
+.contact-body{
+  font-size:16px;font-weight:300;font-style:italic;
+  color:var(--aged-parch);line-height:1.7;
+  max-width:400px;margin-bottom:40px;
+}
+.contact-detail{
+  display:flex;flex-direction:column;gap:16px;
+  margin-bottom:40px;
+}
+.contact-item{
+  display:flex;gap:12px;align-items:center;
+}
+.contact-item-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--bot-green);
+  width:80px;
+}
+.contact-item-val{
+  font-size:14px;font-style:italic;
+  color:var(--aged-parch);
+}
+.media-kit-link{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:9px;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--aged-parch);
+  border:1px solid rgba(200,196,176,0.25);
+  padding:12px 20px;text-decoration:none;
+  transition:all 0.2s;
+}
+.media-kit-link:hover{border-color:var(--magenta);color:var(--magenta)}
+
+.contact-right{
+  padding:120px 64px;
+  background:rgba(0,0,0,0.2);
+}
+.form-label-group{
+  margin-bottom:24px;
+}
+.form-label{
+  font-family:var(--mono);font-size:8px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--aged-parch);
+  display:block;margin-bottom:8px;
+}
+.form-input,
+.form-select,
+.form-textarea{
+  width:100%;
+  background:rgba(245,236,226,0.06);
+  border:1px solid rgba(200,196,176,0.2);
+  color:var(--raw-linen);
+  padding:12px 16px;
+  font-family:var(--serif);font-size:15px;
+  font-style:italic;
+  outline:none;
+  transition:border-color 0.2s;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus{
+  border-color:var(--magenta);
+}
+.form-select{
+  font-style:normal;
+  font-family:var(--mono);font-size:11px;
+}
+.form-select option{background:var(--night-plum)}
+.form-textarea{
+  resize:vertical;min-height:100px;
+}
+.form-grid-2{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.form-submit{
+  width:100%;
+  font-family:var(--mono);font-size:10px;letter-spacing:0.2em;
+  text-transform:uppercase;
+  background:var(--magenta);color:var(--raw-linen);
+  border:none;padding:16px;cursor:pointer;
+  margin-top:8px;transition:background 0.2s;
+}
+.form-submit:hover{background:var(--dk-violet)}
+
+/* FOOTER */
+footer{
+  background:var(--forest-shadow);
+  padding:40px 64px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(200,196,176,0.1);
+}
+.footer-name{
+  font-family:var(--serif);font-size:13px;
+  letter-spacing:0.15em;color:var(--aged-parch);
+}
+.footer-name span{color:var(--magenta)}
+.footer-copy{
+  font-family:var(--mono);font-size:8px;
+  letter-spacing:0.12em;color:rgba(200,196,176,0.3);
+  text-transform:uppercase;
+}
+
+/* PAGE DIVIDERS */
+.page-divider{
+  height:2px;
+  background:linear-gradient(90deg,var(--magenta) 0%,var(--dk-violet) 50%,var(--deep-canopy) 100%);
+}
+
+/* Scroll animations */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.fade-up{animation:fadeUp 0.8s ease forwards}
+.delay-1{animation-delay:0.15s;opacity:0}
+.delay-2{animation-delay:0.3s;opacity:0}
+.delay-3{animation-delay:0.45s;opacity:0}
+.delay-4{animation-delay:0.6s;opacity:0}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Therese <span>Marzouk</span></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#keynote">Keynote</a></li>
+    <li><a href="#planners">For Planners</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Therese</a>
+</nav>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE 1 — HOMEPAGE
+═══════════════════════════════════════ -->
+<section id="home" class="page">
+
+  <div class="home-hero">
+    <div class="hero-left">
+      <p class="hero-eyebrow fade-up">Keynote Speaker &nbsp;·&nbsp; Therese Marzouk</p>
+      <h1 class="hero-headline fade-up delay-1">
+        Day three.<br>
+        <em>Still not ready.</em>
+        <span class="line-3">Move anyway.</span>
+      </h1>
+      <div class="hero-rule fade-up delay-2"></div>
+      <p class="hero-sub fade-up delay-2">
+        Most people will tell you to <strong>sit with it.</strong><br>
+        Therese will stand next to you<br>
+        while you walk through it.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#contact" class="btn-primary">Book Therese to Speak</a>
+        <a href="#keynote" class="btn-ghost">See the Keynote</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-img-placeholder">
+        <p class="hero-img-text">Speaker Photo<br>[ Portrait Placeholder ]</p>
+      </div>
+      <div class="hero-caption">
+        <p>"I have deep thought and surface level humor — and I will be here with you while you walk through it."</p>
+        <cite>— Therese Marzouk</cite>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-bar">
+    <p class="logo-bar-label">Organizations served</p>
+    <div class="logo-bar-logos">
+      <span class="logo-item">Fortune 500</span>
+      <span class="logo-item">Women's ERGs</span>
+      <span class="logo-item">Corporate Leadership</span>
+      <span class="logo-item">Workforce Development</span>
+      <span class="logo-item">Healthcare Organizations</span>
+    </div>
+  </div>
+
+  <div class="philosophy-strip">
+    <div class="phil-item">
+      <div class="phil-number">01</div>
+      <h3 class="phil-title">You don't have to feel ready.</h3>
+      <p class="phil-body">The avocado doesn't warn you. Day three: not yet. Day 3.5: too late. The window is real. The move is now.</p>
+    </div>
+    <div class="phil-item">
+      <div class="phil-number">02</div>
+      <h3 class="phil-title">There is no right way to feel about it.</h3>
+      <p class="phil-body">Grief doesn't resolve in the four weeks before your project is due. Your kids still need to be fed. Both of those things are true at the same time.</p>
+    </div>
+    <div class="phil-item">
+      <div class="phil-number">03</div>
+      <h3 class="phil-title">Moving is the processing.</h3>
+      <p class="phil-body">One small action taken in the direction of forward — even sideways, even imperfectly — is how you find out what you're actually made of.</p>
+    </div>
+  </div>
+
+  <div class="testimonial-hero">
+    <blockquote>
+      "She had people laughing, crying, and leaving with big hearts wanting to do more in life — all in the same forty minutes."
+      <cite>— Event Organizer, Corporate Leadership Conference</cite>
+    </blockquote>
+  </div>
+
+</section>
+
+<div class="page-divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE 2 — ABOUT
+═══════════════════════════════════════ -->
+<section id="about" class="page">
+
+  <div class="about-grid">
+    <div class="about-left">
+      <div class="about-img-block">
+        <p class="about-img-placeholder-text">Portrait Placeholder</p>
+      </div>
+      <p class="about-img-caption">Therese Marzouk &nbsp;·&nbsp; Speaker &nbsp;·&nbsp; Workforce Strategist</p>
+    </div>
+
+    <div class="about-right">
+      <p class="section-eyebrow">About Therese</p>
+      <h2 class="section-headline">
+        She doesn't tell you<br>
+        <em>it happened for a reason.</em>
+      </h2>
+      <div class="section-rule"></div>
+
+      <p class="about-body">
+        Therese Marzouk has spent fifteen years in workforce development watching people freeze. Not because they're weak — but because nobody told them what to do with the weight while they were still carrying it.
+      </p>
+
+      <p class="about-body">
+        She knows what it feels like to have a project due on Friday and a hole in your chest. To stand in a parking lot at a rest stop with a brand new dog and a grief you haven't had time to process yet. To keep feeding your kids, answering your emails, and showing up — not because you're okay, but because <strong>you don't have the option to not be okay.</strong>
+      </p>
+
+      <div class="about-pullquote">
+        <p>"I can't do this for you. But I will be here with you while you walk through it."</p>
+      </div>
+
+      <p class="about-body">
+        What she learned — the hard way, across years of personal loss and professional reinvention — is that moving through the hard thing IS the processing. You don't have to feel ready. You just have to pick one thing and start there.
+      </p>
+
+      <p class="about-body">
+        She brings that philosophy into every room she speaks in. Not as theory. As someone who has actually been frozen, and actually kept moving anyway.
+      </p>
+
+      <div class="credential-row">
+        <div class="credential">
+          <span class="cred-number">15+</span>
+          <span class="cred-label">Years Workforce<br>Development</span>
+        </div>
+        <div class="credential">
+          <span class="cred-number">$5K</span>
+          <span class="cred-label">Keynote<br>Investment</span>
+        </div>
+        <div class="credential">
+          <span class="cred-number">100%</span>
+          <span class="cred-label">Rebook<br>Rate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="page-divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE 3 — KEYNOTE
+═══════════════════════════════════════ -->
+<section id="keynote" class="page">
+
+  <div class="keynote-hero">
+    <div class="keynote-main">
+      <p class="keynote-tag">Signature Keynote</p>
+      <h2 class="keynote-title">
+        Fumbling<br><em>Forward</em>
+      </h2>
+      <p class="keynote-subtitle">How to keep going when you don't feel ready, don't have answers, and the avocado is already on day three.</p>
+
+      <p class="keynote-description">
+        You don't have to feel ready to take the next step. <strong>You just have to take it.</strong>
+      </p>
+      <p class="keynote-description">
+        This is not a keynote about toxic positivity or hustle culture or pretending the hard thing isn't hard. It's about the person sitting in a cubicle staring at their calendar with a project due and something going on at home — and not knowing which thing to tackle first because it all feels too heavy.
+      </p>
+      <p class="keynote-description">
+        Therese meets that person exactly where they are. She doesn't tell them to sit with it. She stands next to them while they figure out what's next.
+      </p>
+
+      <a href="#contact" class="btn-primary">Book This Keynote</a>
+    </div>
+
+    <div class="keynote-sidebar">
+      <div class="sidebar-block">
+        <p class="sidebar-label">Perfect for</p>
+        <ul class="sidebar-list">
+          <li>Corporate leadership conferences</li>
+          <li>Women's ERG events</li>
+          <li>Workforce development summits</li>
+          <li>Healthcare organizations</li>
+          <li>Teams navigating change or transition</li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Past Audiences</p>
+        <ul class="sidebar-list">
+          <li>Fortune 500 leadership teams</li>
+          <li>Healthcare workforce summits</li>
+          <li>Women in leadership conferences</li>
+          <li>Corporate transition programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="takeaways-section">
+    <p class="section-eyebrow" style="color:var(--bot-green)">What audiences walk away with</p>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">
+        <div class="takeaway-num">01</div>
+        <p class="takeaway-text">Permission to move forward before they feel ready — and a framework for doing it without abandoning what matters.</p>
+      </div>
+      <div class="takeaway-card">
+        <div class="takeaway-num">02</div>
+        <p class="takeaway-text">A practical approach to navigating workplace transition, personal loss, and uncertainty — at the same time, in real life.</p>
+      </div>
+      <div class="takeaway-card">
+        <div class="takeaway-num">03</div>
+        <p class="takeaway-text">The difference between waiting for clarity and building something you can adjust. One leaves you with nothing. The other leaves you with a start.</p>
+      </div>
+      <div class="takeaway-card">
+        <div class="takeaway-num">04</div>
+        <p class="takeaway-text">Language for the thing they've been feeling but couldn't say out loud — and the relief of hearing someone on stage say it first.</p>
+      </div>
+      <div class="takeaway-card">
+        <div class="takeaway-num">05</div>
+        <p class="takeaway-text">One concrete next action they can take before they leave the room. Not a life plan. One thing. That's how it starts.</p>
+      </div>
+      <div class="takeaway-card">
+        <div class="takeaway-num">06</div>
+        <p class="takeaway-text">The felt experience of being in a room with someone who has deep thought and surface level humor — and means every word of both.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="page-divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE 4 — FOR EVENT PLANNERS
+═══════════════════════════════════════ -->
+<section id="planners" class="page">
+
+  <div class="planners-hero">
+    <div class="planners-intro">
+      <p class="section-eyebrow" style="color:var(--deep-canopy)">For Meeting &amp; Event Planners</p>
+      <h2 class="section-headline">
+        Everything you need<br>
+        to make the <em>case.</em>
+      </h2>
+      <div class="section-rule"></div>
+      <p class="about-body">
+        Therese knows your job doesn't end when you book the speaker. It begins. Here's what you need to know — the fee, what's included, what your audience will walk away with, and what people who've been in the room before you have said.
+      </p>
+    </div>
+  </div>
+
+  <div class="planners-grid">
+    <div class="what-you-get">
+      <h3 class="wg-title">What's included in every engagement</h3>
+
+      <div class="wg-item">
+        <div class="wg-icon">01</div>
+        <div class="wg-content">
+          <p class="wg-label">Keynote Presentation</p>
+          <p class="wg-desc">Fumbling Forward — fully customized to your audience, your event theme, and the specific challenge your people are navigating right now. Therese does her homework.</p>
+        </div>
+      </div>
+
+      <div class="wg-item">
+        <div class="wg-icon">02</div>
+        <div class="wg-content">
+          <p class="wg-label">Pre-Event Planning Call</p>
+          <p class="wg-desc">A dedicated call to understand your audience, your goals, and what success looks like for your event. Not a formality — the call is where the keynote actually gets built.</p>
+        </div>
+      </div>
+
+      <div class="wg-item">
+        <div class="wg-icon">03</div>
+        <div class="wg-content">
+          <p class="wg-label">Standard Domestic Travel</p>
+          <p class="wg-desc">Included in the keynote fee. Extended travel, international events, and multi-day engagements quoted separately.</p>
+        </div>
+      </div>
+
+      <div class="wg-item">
+        <div class="wg-icon">04</div>
+        <div class="wg-content">
+          <p class="wg-label">Post-Event Availability</p>
+          <p class="wg-desc">Therese stays in the room. She answers questions, continues conversations, and makes herself available to your attendees after she walks off stage.</p>
+        </div>
+      </div>
+
+      <div class="wg-item">
+        <div class="wg-icon">05</div>
+        <div class="wg-content">
+          <p class="wg-label">Add-On Options</p>
+          <p class="wg-desc">Workshops, breakout sessions, panel participation, and virtual formats available. Ask about what's possible for your specific event.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fee-block">
+      <p class="fee-label">Speaking Investment</p>
+      <p class="fee-amount">$5,000</p>
+      <p class="fee-note">Keynote fee includes pre-event planning call and standard domestic travel expenses.</p>
+      <div class="fee-divider"></div>
+      <p class="fee-terms-label">Payment Terms</p>
+      <p class="fee-term">50% non-refundable retainer due upon booking</p>
+      <p class="fee-term">Remaining balance due 14 days prior to event</p>
+      <p class="fee-term">Government &amp; public sector invoicing available</p>
+      <div class="fee-divider"></div>
+      <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block;margin-top:8px">Check Availability</a>
+    </div>
+  </div>
+
+  <div class="testimonial-strip">
+    <div class="tstrip-item">
+      <p class="tstrip-quote">"She made me laugh, cry, and feel motivated all in one talk. That's how you know you have something special."</p>
+      <p class="tstrip-attr">Women's Leadership Conference</p>
+    </div>
+    <div class="tstrip-item">
+      <p class="tstrip-quote">"She had people laughing, crying, and leaving with big hearts. You could feel it in the room."</p>
+      <p class="tstrip-attr">Corporate Leadership Summit</p>
+    </div>
+    <div class="tstrip-item">
+      <p class="tstrip-quote">"She stayed longer to answer questions and kept talking to people. That's not nothing — that's everything."</p>
+      <p class="tstrip-attr">ERG Annual Conference</p>
+    </div>
+  </div>
+
+</section>
+
+<div class="page-divider"></div>
+
+
+<!-- ═══════════════════════════════════════
+     PAGE 5 — CONTACT
+═══════════════════════════════════════ -->
+<section id="contact" class="page">
+
+  <div class="contact-grid">
+    <div class="contact-left">
+      <p class="section-eyebrow" style="color:var(--bot-green)">Book Therese</p>
+      <h2 class="contact-headline">
+        Let's find out<br>
+        if this is the <em>right fit.</em>
+      </h2>
+      <div class="section-rule"></div>
+      <p class="contact-body">
+        Tell Therese about your event and your people. The more specific you are, the better she can tell you whether Fumbling Forward is what your audience needs right now — and how to make it theirs.
+      </p>
+
+      <div class="contact-detail">
+        <div class="contact-item">
+          <span class="contact-item-label">Response</span>
+          <span class="contact-item-val">Within 48 hours</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Email</span>
+          <span class="contact-item-val">hello@theresemarzouk.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-label">Format</span>
+          <span class="contact-item-val">In person · Virtual · Hybrid</span>
+        </div>
+      </div>
+
+      <a href="#" class="media-kit-link">
+        ↓ &nbsp; Download Media Kit
+      </a>
+    </div>
+
+    <div class="contact-right">
+      <form>
+        <div class="form-grid-2">
+          <div class="form-label-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Your first name">
+          </div>
+          <div class="form-label-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Your last name">
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-label-group">
+            <label class="form-label">Organization</label>
+            <input type="text" class="form-input" placeholder="Company or org">
+          </div>
+          <div class="form-label-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="your@email.com">
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-label-group">
+            <label class="form-label">Event Date</label>
+            <input type="text" class="form-input" placeholder="Approximate date">
+          </div>
+          <div class="form-label-group">
+            <label class="form-label">Audience Size</label>
+            <input type="text" class="form-input" placeholder="Estimated attendees">
+          </div>
+        </div>
+
+        <div class="form-label-group">
+          <label class="form-label">Event Format</label>
+          <select class="form-select">
+            <option value="">Select format</option>
+            <option>In Person</option>
+            <option>Virtual</option>
+            <option>Hybrid</option>
+          </select>
+        </div>
+
+        <div class="form-label-group">
+          <label class="form-label">Presentation Type</label>
+          <select class="form-select">
+            <option value="">Select type</option>
+            <option>Keynote</option>
+            <option>Workshop</option>
+            <option>Panel Discussion</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-label-group">
+          <label class="form-label">Tell me about your audience — what are they navigating right now?</label>
+          <textarea class="form-textarea" placeholder="The more specific you are, the better I can serve your people."></textarea>
+        </div>
+
+        <div class="form-label-group">
+          <label class="form-label">How did you hear about Therese?</label>
+          <input type="text" class="form-input" placeholder="Referral, search, social...">
+        </div>
+
+        <button type="submit" class="form-submit">Send Inquiry →</button>
+      </form>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-name">Therese <span>Marzouk</span></span>
+  <span class="footer-copy">© 2026 · All rights reserved · Keynote Speaker</span>
+</footer>
+
+</body>
+</html>
