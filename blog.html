@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — Therese Marzouk</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --M:#D600D6;--G:#78A53C;--V:#692D69;--P:#5A2D4B;
+  --DC:#425233;--L:#F5ECE2;--AP:#C8C4B0;
+  --F:#1E2828;--DK:#2D3C1E;--NP:#3C1E3C;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --mono:'Space Mono',monospace;
+  --display:'Bebas Neue',Impact,sans-serif;
+  --g:60px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--L);color:var(--F);font-family:var(--serif);overflow-x:hidden}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:16px var(--g);background:rgba(245,236,226,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,40,40,.1);transition:box-shadow .3s}
+.nav-logo{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--F);text-decoration:none}
+.nav-logo b{color:var(--M)}
+.nav-ul{display:flex;gap:24px;list-style:none}
+.nav-ul a{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--F);text-decoration:none;transition:color .2s;padding-bottom:2px;border-bottom:2px solid transparent}
+.nav-ul a:hover{color:var(--M)}
+.nav-ul a.active{color:var(--M);border-bottom:2px solid var(--M)}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:10px 22px;border:1.5px solid var(--M);color:var(--M);background:transparent;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--M);color:var(--L)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:1.5px;background:var(--F);transition:all .3s}
+#mob{display:none;position:fixed;top:60px;left:0;right:0;z-index:299;background:var(--L);border-bottom:2px solid var(--M);padding:18px var(--g);flex-direction:column;gap:0}
+#mob.open{display:flex}
+#mob a{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--F);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(30,40,40,.12)}
+#mob a:last-child{border:none;color:var(--M);margin-top:6px;text-align:center;padding:11px;border:1.5px solid var(--M)}
+/* UTILS */
+.ey{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:16px}
+.ey-lt{color:var(--L)} .ey-mg{color:var(--M)} .ey-ap{color:var(--AP)}
+.prose{font-size:19px;font-weight:300;line-height:1.82;color:var(--F);margin-bottom:18px}
+.prose strong{font-weight:600;color:var(--F)}
+.prose-lt{color:var(--L)} .prose-lt strong{color:var(--L)}
+.rule{width:44px;height:2px;background:var(--M);margin:24px 0}
+.rule-lt{background:var(--L)}
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:14px 32px;text-decoration:none;cursor:pointer;border:none;transition:all .2s}
+.btn-mg{background:var(--M);color:var(--L)}.btn-mg:hover{background:var(--V)}
+.btn-ol{background:transparent;color:var(--F);border:1.5px solid rgba(30,40,40,.4)}.btn-ol:hover{border-color:var(--F)}
+.btn-ol-lt{background:transparent;color:var(--L);border:1.5px solid rgba(245,236,226,.5)}.btn-ol-lt:hover{border-color:var(--L)}
+.divider{height:3px;background:linear-gradient(90deg,var(--M),var(--V),var(--DC))}
+.page-wrap{padding-top:60px}
+/* FOOTER */
+footer{background:var(--F);padding:32px var(--g);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(245,236,226,.07)}
+.ft-brand{font-family:var(--serif);font-size:16px;letter-spacing:.12em;color:var(--AP)}
+.ft-brand b{color:var(--M)}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap}
+.ft-links a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--L);text-decoration:none;transition:color .2s}
+.ft-links a:hover{color:var(--M)}
+.ft-copy{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--AP);text-transform:uppercase;width:100%;margin-top:8px}
+/* SHARED INQUIRY SECTION */
+.inquiry-band{background:var(--F);padding:80px var(--g)}
+.inq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:0}
+.inq-l{padding:56px var(--g) 56px 0;border-right:1px solid rgba(245,236,226,.1)}
+.inq-hed{font-size:clamp(30px,4vw,52px);font-weight:300;line-height:1.1;color:var(--L);margin-bottom:18px}
+.inq-hed em{font-style:italic;color:var(--M)}
+.inq-detail{display:flex;flex-direction:column;gap:13px;margin:26px 0}
+.inq-row{display:flex;gap:12px;align-items:baseline}
+.inq-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--AP);width:80px;flex-shrink:0}
+.inq-val{font-size:16px;font-style:italic;color:var(--L)}
+.mk{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--L);border:1px solid rgba(245,236,226,.3);padding:11px 18px;text-decoration:none;transition:all .2s;margin-top:8px}
+.mk:hover{border-color:var(--M);color:var(--M)}
+.inq-r{padding:56px 0 56px var(--g)}
+.fg{margin-bottom:18px}
+.fl{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--AP);margin-bottom:7px}
+.fi,.fs,.ft{width:100%;background:rgba(245,236,226,.07);border:1px solid rgba(245,236,226,.2);color:var(--L);padding:12px 14px;font-family:var(--serif);font-size:17px;font-style:italic;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.fi::placeholder{color:rgba(245,236,226,.35)}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--M)}
+.fs{font-family:var(--mono);font-size:13px;font-style:normal;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23F5ECE2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;background-color:rgba(245,236,226,.07)}
+.fs option{background:var(--F);color:var(--L)}
+.ft{resize:vertical;min-height:90px}
+.ft::placeholder{color:rgba(245,236,226,.35)}
+.fr-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsub{width:100%;font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;background:var(--M);color:var(--L);border:none;padding:15px;cursor:pointer;transition:background .2s;margin-top:6px}
+.fsub:hover{background:var(--V)}
+#success{display:none;padding:18px;background:var(--DK);margin-top:14px;color:var(--L);font-family:var(--mono);font-size:12px;letter-spacing:.10em;text-transform:uppercase}
+/* RESPONSIVE */
+@media(max-width:900px){
+  :root{--g:28px}
+  .nav-ul,.nav-cta{display:none}
+  .ham{display:flex}
+  .inq-grid{grid-template-columns:1fr}
+  .inq-l{padding:48px 0 32px;border-right:none;border-bottom:1px solid rgba(245,236,226,.1)}
+  .inq-r{padding:32px 0 48px}
+  footer{flex-direction:column;align-items:flex-start}
+  .ft-links{flex-wrap:wrap;gap:14px}
+}
+@media(max-width:580px){
+  :root{--g:18px}
+  .fr-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Therese <b>Marzouk</b></a>
+  <ul class="nav-ul"><li><a href="index.html" onclick="cm()">Home</a></li>
+<li><a href="about.html" onclick="cm()">About</a></li>
+<li><a href="book.html" onclick="cm()">Book Therese</a></li>
+<li><a href="proof.html" onclick="cm()">Social Proof</a></li>
+<li><a href="blog.html" class="active" onclick="cm()">Field Notes</a></li>
+</ul>
+  <a href="book.html" class="nav-cta">Book Therese</a>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob">
+  <a href="index.html" onclick="cm()">Home</a>
+<a href="about.html" onclick="cm()">About</a>
+<a href="book.html" onclick="cm()">Book Therese</a>
+<a href="proof.html" onclick="cm()">Social Proof</a>
+<a href="blog.html" onclick="cm()">Field Notes</a>
+
+  <a href="book.html" onclick="cm()">Book Therese to Speak</a>
+</div>
+<div class="page-wrap">
+<style>
+.blog-hero{background:var(--F);padding:90px var(--g) 64px}
+.blog-hero h1{font-size:clamp(40px,5.5vw,78px);font-weight:300;line-height:1.05;color:var(--L);max-width:680px}
+.blog-hero h1 em{font-style:italic;color:var(--M)}
+.blog-grid{padding:72px var(--g);background:var(--L);display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start}
+.blog-main{}
+.post-featured{border-top:3px solid var(--M);padding:28px 0 36px;margin-bottom:36px;border-bottom:1px solid rgba(30,40,40,.1)}
+.post-tag{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--M);margin-bottom:10px;display:block}
+.post-title{font-size:clamp(24px,3vw,38px);font-weight:300;line-height:1.15;color:var(--F);margin-bottom:12px;text-decoration:none;display:block}
+.post-title:hover{color:var(--M)}
+.post-excerpt{font-size:17px;font-weight:300;font-style:italic;color:var(--F);line-height:1.7;margin-bottom:18px;opacity:.85}
+.post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)}
+.post-card{padding:22px 0;border-bottom:1px solid rgba(30,40,40,.1)}
+.post-card:first-child{border-top:1px solid rgba(30,40,40,.1)}
+.post-card-title{font-size:21px;font-weight:300;color:var(--F);line-height:1.25;margin-bottom:8px;text-decoration:none;display:block}
+.post-card-title:hover{color:var(--M)}
+.post-card-excerpt{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.65;margin-bottom:10px;opacity:.8}
+.blog-sidebar{}
+.sidebar-module{background:white;border-top:2px solid var(--M);padding:24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(30,40,40,.05)}
+.sidebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--M);margin-bottom:14px;display:block}
+.sidebar-text{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.6;margin-bottom:16px}
+.sidebar-topics{display:flex;flex-direction:column;gap:8px}
+.topic-link{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--F);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(30,40,40,.08);transition:color .2s}
+.topic-link:hover{color:var(--M)}
+.topic-link:last-child{border:none}
+.blog-cta-band{background:var(--NP);padding:64px var(--g)}
+.blog-cta-band p{font-size:clamp(20px,2.8vw,30px);font-weight:300;font-style:italic;color:var(--L);max-width:560px;line-height:1.5;margin-bottom:28px}
+@media(max-width:900px){
+  .blog-grid{grid-template-columns:1fr}
+}
+</style>
+<div class="blog-hero">
+  <span class="ey ey-mg">Field Notes</span>
+  <h1>Thoughts from<br><em>someone still figuring it out.</em></h1>
+  <div class="rule rule-lt"></div>
+  <p class="prose prose-lt" style="max-width:520px;font-size:19px">Therese writes about navigating hard seasons, the science of why we freeze, the words that actually help, and the avocado theory of timing. No platitudes. No performance. Just real.</p>
+</div>
+
+<div class="blog-grid">
+  <div class="blog-main">
+    <div class="post-featured">
+      <span class="post-tag">Most Read &nbsp;·&nbsp; Resilience</span>
+      <a href="#" class="post-title">The Avocado Rule: Why Timing Beats Readiness Every Time</a>
+      <p class="post-excerpt">There's a brief window between "not yet" and "too late" that most people miss — not because they weren't paying attention, but because they were waiting to feel ready first. The avocado doesn't care about your readiness. Neither does the opportunity.</p>
+      <p class="post-meta">May 2026 &nbsp;·&nbsp; 5 min read</p>
+    </div>
+
+    <div class="post-card">
+      <span class="post-tag" style="font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px">Workplace Transition</span>
+      <a href="#" class="post-card-title">What "Wait and See" Actually Costs You During Organizational Change</a>
+      <p class="post-card-excerpt">When a new boss arrives, most people freeze. They wait to see what they want. They pause their projects. They hold their breath. Here's why that strategy always backfires — and what to do instead.</p>
+      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">April 2026 &nbsp;·&nbsp; 4 min read</p>
+    </div>
+
+    <div class="post-card">
+      <span class="post-tag" style="font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px">Grief &amp; Work</span>
+      <a href="#" class="post-card-title">I Don't Have Time to Process My Grief Right Now — And That's Okay</a>
+      <p class="post-card-excerpt">Every speaker will tell you to feel your feelings. None of them mention that your kids still need to be fed. Here's the thing nobody says out loud about grief and professional life coexisting in the same body.</p>
+      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">March 2026 &nbsp;·&nbsp; 6 min read</p>
+    </div>
+
+    <div class="post-card">
+      <span class="post-tag" style="font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px">Language &amp; Leadership</span>
+      <a href="#" class="post-card-title">The Words That Actually Help (And the Ones That Just Make You Feel Better)</a>
+      <p class="post-card-excerpt">There's a reason "everything happens for a reason" makes people want to leave the room. It's not unkind. It's just not useful. Here's the difference — and the six things worth saying instead.</p>
+      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">February 2026 &nbsp;·&nbsp; 5 min read</p>
+    </div>
+
+    <div class="post-card">
+      <span class="post-tag" style="font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px">Science Nerd Corner</span>
+      <a href="#" class="post-card-title">Why Your Brain Freezes Under Pressure — And the One Thing That Unfreezes It</a>
+      <p class="post-card-excerpt">It's not weakness. It's neuroscience. When the amygdala hijacks your prefrontal cortex, waiting for clarity is the worst possible strategy. Here's what the research actually says — and it's more actionable than you think.</p>
+      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">January 2026 &nbsp;·&nbsp; 7 min read</p>
+    </div>
+  </div>
+
+  <div class="blog-sidebar">
+    <div class="sidebar-module">
+      <span class="sidebar-label">Bring Therese to your event</span>
+      <p class="sidebar-text">If something she wrote resonated — imagine what she can do in a room with your people for forty minutes.</p>
+      <a href="book.html" class="btn btn-mg" style="display:block;text-align:center;font-size:11px;padding:12px 20px">Inquire About Speaking</a>
+    </div>
+
+    <div class="sidebar-module">
+      <span class="sidebar-label">Topics</span>
+      <div class="sidebar-topics">
+        <a href="#" class="topic-link">Resilience &amp; Transition</a>
+        <a href="#" class="topic-link">Workplace Change</a>
+        <a href="#" class="topic-link">Grief &amp; Professional Life</a>
+        <a href="#" class="topic-link">Language &amp; Leadership</a>
+        <a href="#" class="topic-link">Science Nerd Corner</a>
+        <a href="#" class="topic-link">The Avocado Files</a>
+      </div>
+    </div>
+
+    <div class="sidebar-module">
+      <span class="sidebar-label">Therese on the road</span>
+      <p class="sidebar-text">She writes from hotel rooms, airports, and the occasional rest stop. The dog is fine.</p>
+    </div>
+  </div>
+</div>
+
+<div class="blog-cta-band">
+  <p>"If you've been waiting for the right time to book a speaker — Day 3.5 is coming faster than you think."</p>
+  <a href="book.html" class="btn btn-ol-lt">Start the Conversation</a>
+</div>
+
+<div class="divider"></div>
+
+<div class="inquiry-band" id="contact">
+  <span class="ey ey-lt">Book Therese</span>
+  <h2 style="font-size:clamp(34px,4vw,58px);font-weight:300;line-height:1.07;color:var(--L);max-width:560px;margin-bottom:16px">
+    Something resonated.<br><em style="font-style:italic;color:var(--M)">Let's talk.</em>
+  </h2>
+  <div class="rule rule-lt"></div>
+  <p class="prose prose-lt" style="max-width:460px;font-size:17px">Tell Therese about your event and your people. She'll tell you honestly whether Fumbling Forward is the right fit — and if it's not, she'll say that too.</p>
+  <div class="inq-grid">
+    <div class="inq-l">
+      <h3 class="inq-hed">Your audience is<br><em>already waiting.</em></h3>
+      <div class="rule rule-lt"></div>
+      <p class="prose prose-lt" style="font-size:17px">Therese responds to every inquiry within 48 hours.</p>
+      <div class="inq-detail">
+        <div class="inq-row"><span class="inq-lbl">Response</span><span class="inq-val">Within 48 hours</span></div>
+        <div class="inq-row"><span class="inq-lbl">Email</span><span class="inq-val">hello@theresemarzouk.com</span></div>
+        <div class="inq-row"><span class="inq-lbl">Format</span><span class="inq-val">In person · Virtual · Hybrid</span></div>
+      </div>
+      <a href="#" class="mk">↓ &nbsp; Download Media Kit</a>
+    </div>
+    <div class="inq-r">
+      <form id="inquiry" onsubmit="handleSub(event)">
+        <div class="fr-2">
+          <div class="fg"><label class="fl">First Name</label><input type="text" class="fi" placeholder="First name" required></div>
+          <div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" placeholder="Last name" required></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Organization</label><input type="text" class="fi" placeholder="Company or org" required></div>
+          <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="your@email.com" required></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Event Date</label><input type="text" class="fi" placeholder="Approximate date"></div>
+          <div class="fg"><label class="fl">Audience Size</label><input type="text" class="fi" placeholder="Estimated attendees"></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Event Format</label>
+            <select class="fs"><option value="">Select format</option><option>In Person</option><option>Virtual</option><option>Hybrid</option></select>
+          </div>
+          <div class="fg"><label class="fl">Presentation Type</label>
+            <select class="fs"><option value="">Select type</option><option>Keynote</option><option>Workshop</option><option>Panel</option><option>Other</option></select>
+          </div>
+        </div>
+        <div class="fg"><label class="fl">What are your people navigating right now?</label><textarea class="ft" placeholder="The more specific you are, the better Therese can serve your audience." required></textarea></div>
+        <div class="fg"><label class="fl">How did you hear about Therese?</label><input type="text" class="fi" placeholder="Referral, search, social..."></div>
+        <button type="submit" class="fsub">Send Inquiry →</button>
+      </form>
+      <div id="success">✓ &nbsp; Message received. Therese will be in touch within 48 hours.</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="ft-brand">Therese <b>Marzouk</b></span>
+  <div class="ft-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="book.html">Book Therese</a><a href="proof.html">Social Proof</a><a href="blog.html">Field Notes</a></div>
+  <p class="ft-copy">© 2026 Therese Marzouk · All rights reserved · Keynote Speaker</p>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+if(ham&&mob){
+  ham.addEventListener('click',()=>mob.classList.toggle('open'));
+  document.addEventListener('click',e=>{if(!ham.contains(e.target)&&!mob.contains(e.target))mob.classList.remove('open')});
+}
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  if(n)n.style.boxShadow=window.scrollY>20?'0 2px 18px rgba(30,40,40,.1)':'none';
+});
+function cm(){if(mob)mob.classList.remove('open')}
+function handleSub(e){
+  e.preventDefault();
+  const f=document.getElementById('inquiry');
+  const s=document.getElementById('success');
+  if(f)f.style.display='none';
+  if(s)s.style.display='block';
+}
+</script>
+</body>
+</html>

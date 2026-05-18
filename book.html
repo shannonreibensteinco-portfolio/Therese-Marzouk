@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Therese — Therese Marzouk</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --M:#D600D6;--G:#78A53C;--V:#692D69;--P:#5A2D4B;
+  --DC:#425233;--L:#F5ECE2;--AP:#C8C4B0;
+  --F:#1E2828;--DK:#2D3C1E;--NP:#3C1E3C;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --mono:'Space Mono',monospace;
+  --display:'Bebas Neue',Impact,sans-serif;
+  --g:60px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--L);color:var(--F);font-family:var(--serif);overflow-x:hidden}
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;justify-content:space-between;align-items:center;padding:16px var(--g);background:rgba(245,236,226,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(30,40,40,.1);transition:box-shadow .3s}
+.nav-logo{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--F);text-decoration:none}
+.nav-logo b{color:var(--M)}
+.nav-ul{display:flex;gap:24px;list-style:none}
+.nav-ul a{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--F);text-decoration:none;transition:color .2s;padding-bottom:2px;border-bottom:2px solid transparent}
+.nav-ul a:hover{color:var(--M)}
+.nav-ul a.active{color:var(--M);border-bottom:2px solid var(--M)}
+.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:10px 22px;border:1.5px solid var(--M);color:var(--M);background:transparent;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--M);color:var(--L)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.ham span{display:block;width:22px;height:1.5px;background:var(--F);transition:all .3s}
+#mob{display:none;position:fixed;top:60px;left:0;right:0;z-index:299;background:var(--L);border-bottom:2px solid var(--M);padding:18px var(--g);flex-direction:column;gap:0}
+#mob.open{display:flex}
+#mob a{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--F);text-decoration:none;padding:16px 0;border-bottom:1px solid rgba(30,40,40,.12)}
+#mob a:last-child{border:none;color:var(--M);margin-top:6px;text-align:center;padding:11px;border:1.5px solid var(--M)}
+/* UTILS */
+.ey{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:16px}
+.ey-lt{color:var(--L)} .ey-mg{color:var(--M)} .ey-ap{color:var(--AP)}
+.prose{font-size:19px;font-weight:300;line-height:1.82;color:var(--F);margin-bottom:18px}
+.prose strong{font-weight:600;color:var(--F)}
+.prose-lt{color:var(--L)} .prose-lt strong{color:var(--L)}
+.rule{width:44px;height:2px;background:var(--M);margin:24px 0}
+.rule-lt{background:var(--L)}
+.btn{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.13em;text-transform:uppercase;padding:14px 32px;text-decoration:none;cursor:pointer;border:none;transition:all .2s}
+.btn-mg{background:var(--M);color:var(--L)}.btn-mg:hover{background:var(--V)}
+.btn-ol{background:transparent;color:var(--F);border:1.5px solid rgba(30,40,40,.4)}.btn-ol:hover{border-color:var(--F)}
+.btn-ol-lt{background:transparent;color:var(--L);border:1.5px solid rgba(245,236,226,.5)}.btn-ol-lt:hover{border-color:var(--L)}
+.divider{height:3px;background:linear-gradient(90deg,var(--M),var(--V),var(--DC))}
+.page-wrap{padding-top:60px}
+/* FOOTER */
+footer{background:var(--F);padding:32px var(--g);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(245,236,226,.07)}
+.ft-brand{font-family:var(--serif);font-size:16px;letter-spacing:.12em;color:var(--AP)}
+.ft-brand b{color:var(--M)}
+.ft-links{display:flex;gap:20px;flex-wrap:wrap}
+.ft-links a{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--L);text-decoration:none;transition:color .2s}
+.ft-links a:hover{color:var(--M)}
+.ft-copy{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--AP);text-transform:uppercase;width:100%;margin-top:8px}
+/* SHARED INQUIRY SECTION */
+.inquiry-band{background:var(--F);padding:80px var(--g)}
+.inq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:0}
+.inq-l{padding:56px var(--g) 56px 0;border-right:1px solid rgba(245,236,226,.1)}
+.inq-hed{font-size:clamp(30px,4vw,52px);font-weight:300;line-height:1.1;color:var(--L);margin-bottom:18px}
+.inq-hed em{font-style:italic;color:var(--M)}
+.inq-detail{display:flex;flex-direction:column;gap:13px;margin:26px 0}
+.inq-row{display:flex;gap:12px;align-items:baseline}
+.inq-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--AP);width:80px;flex-shrink:0}
+.inq-val{font-size:16px;font-style:italic;color:var(--L)}
+.mk{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--L);border:1px solid rgba(245,236,226,.3);padding:11px 18px;text-decoration:none;transition:all .2s;margin-top:8px}
+.mk:hover{border-color:var(--M);color:var(--M)}
+.inq-r{padding:56px 0 56px var(--g)}
+.fg{margin-bottom:18px}
+.fl{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--AP);margin-bottom:7px}
+.fi,.fs,.ft{width:100%;background:rgba(245,236,226,.07);border:1px solid rgba(245,236,226,.2);color:var(--L);padding:12px 14px;font-family:var(--serif);font-size:17px;font-style:italic;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.fi::placeholder{color:rgba(245,236,226,.35)}
+.fi:focus,.fs:focus,.ft:focus{border-color:var(--M)}
+.fs{font-family:var(--mono);font-size:13px;font-style:normal;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23F5ECE2'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px;background-color:rgba(245,236,226,.07)}
+.fs option{background:var(--F);color:var(--L)}
+.ft{resize:vertical;min-height:90px}
+.ft::placeholder{color:rgba(245,236,226,.35)}
+.fr-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsub{width:100%;font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;background:var(--M);color:var(--L);border:none;padding:15px;cursor:pointer;transition:background .2s;margin-top:6px}
+.fsub:hover{background:var(--V)}
+#success{display:none;padding:18px;background:var(--DK);margin-top:14px;color:var(--L);font-family:var(--mono);font-size:12px;letter-spacing:.10em;text-transform:uppercase}
+/* RESPONSIVE */
+@media(max-width:900px){
+  :root{--g:28px}
+  .nav-ul,.nav-cta{display:none}
+  .ham{display:flex}
+  .inq-grid{grid-template-columns:1fr}
+  .inq-l{padding:48px 0 32px;border-right:none;border-bottom:1px solid rgba(245,236,226,.1)}
+  .inq-r{padding:32px 0 48px}
+  footer{flex-direction:column;align-items:flex-start}
+  .ft-links{flex-wrap:wrap;gap:14px}
+}
+@media(max-width:580px){
+  :root{--g:18px}
+  .fr-2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">Therese <b>Marzouk</b></a>
+  <ul class="nav-ul"><li><a href="index.html" onclick="cm()">Home</a></li>
+<li><a href="about.html" onclick="cm()">About</a></li>
+<li><a href="book.html" class="active" onclick="cm()">Book Therese</a></li>
+<li><a href="proof.html" onclick="cm()">Social Proof</a></li>
+<li><a href="blog.html" onclick="cm()">Field Notes</a></li>
+</ul>
+  <a href="book.html" class="nav-cta">Book Therese</a>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mob">
+  <a href="index.html" onclick="cm()">Home</a>
+<a href="about.html" onclick="cm()">About</a>
+<a href="book.html" onclick="cm()">Book Therese</a>
+<a href="proof.html" onclick="cm()">Social Proof</a>
+<a href="blog.html" onclick="cm()">Field Notes</a>
+
+  <a href="book.html" onclick="cm()">Book Therese to Speak</a>
+</div>
+<div class="page-wrap">
+<style>
+.book-hero{background:var(--F);padding:90px var(--g) 72px}
+.kn-grid{display:grid;grid-template-columns:3fr 2fr;gap:52px;align-items:start;margin-top:40px}
+.kn-hed{font-family:var(--display);font-size:clamp(60px,8vw,110px);letter-spacing:.04em;line-height:.95;color:var(--L);margin-bottom:6px}
+.kn-hed em{color:var(--M);font-family:var(--display);font-style:normal}
+.kn-sub{font-family:var(--mono);font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:var(--AP);margin:16px 0 26px;line-height:1.6}
+.kn-desc{font-size:19px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.8;margin-bottom:14px}
+.kn-desc strong{font-style:normal;color:var(--L);font-weight:600}
+.sb{background:var(--NP);padding:22px;margin-bottom:12px}
+.sb-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--L);margin-bottom:12px}
+.sb-list{list-style:none}
+.sb-list li{font-size:16px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.6;padding:6px 0;border-bottom:1px solid rgba(245,236,226,.06)}
+.sb-list li:last-child{border:none}
+.sb-list li::before{content:'→ ';color:var(--M);font-style:normal}
+.takeaways{padding:76px var(--g);background:var(--L)}
+.ta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.ta-card{background:#fff;border-top:2px solid var(--M);padding:24px;box-shadow:0 2px 12px rgba(30,40,40,.05);position:relative;overflow:hidden}
+.ta-card::before{content:attr(data-n);position:absolute;bottom:-8px;right:8px;font-family:var(--display);font-size:72px;color:rgba(30,40,40,.04);line-height:1;pointer-events:none}
+.ta-n{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--M);letter-spacing:.1em;margin-bottom:8px}
+.ta-t{font-size:17px;font-weight:300;font-style:italic;color:var(--F);line-height:1.55}
+.formats{background:var(--DK);padding:64px var(--g)}
+.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.format-card{border:1px solid rgba(245,236,226,.15);padding:28px}
+.format-label{font-family:var(--display);font-size:36px;letter-spacing:.04em;color:var(--M);margin-bottom:8px}
+.format-name{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--L);margin-bottom:14px}
+.format-desc{font-size:16px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.65}
+.kn-cta{background:var(--V);padding:52px var(--g);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.kn-cta p{font-size:clamp(18px,2.5vw,26px);font-style:italic;font-weight:300;color:var(--L);max-width:460px}
+@media(max-width:900px){
+  .kn-grid{grid-template-columns:1fr}
+  .ta-grid{grid-template-columns:1fr 1fr}
+  .formats-grid{grid-template-columns:1fr}
+  .kn-cta{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:580px){
+  .ta-grid{grid-template-columns:1fr}
+}
+</style>
+<div class="book-hero">
+  <span class="ey ey-mg">Signature Keynote</span>
+  <div class="kn-grid">
+    <div>
+      <h1 class="kn-hed">FUMBLING<br><em>FORWARD</em></h1>
+      <p class="kn-sub">How to keep going when you don't feel ready, don't have answers, and the avocado is already on day three.</p>
+      <p class="kn-desc">You don't have to feel ready to take the next step. <strong>You just have to take it.</strong></p>
+      <p class="kn-desc">Not a keynote about toxic positivity. Not a keynote about hustle culture. It's about the person staring at their calendar with a project due and something going on at home — and not knowing which thing to tackle first because it all feels too heavy.</p>
+      <p class="kn-desc">Therese meets that person exactly where they are. She doesn't tell them to sit with it. She stands next to them while they figure out what's next.</p>
+      <a href="#contact" class="btn btn-mg" style="margin-top:16px">Inquire About This Keynote</a>
+    </div>
+    <div>
+      <div class="sb">
+        <p class="sb-lbl">Perfect for</p>
+        <ul class="sb-list">
+          <li>Corporate leadership conferences</li>
+          <li>Women's ERG events</li>
+          <li>Workforce development summits</li>
+          <li>Healthcare organizations</li>
+          <li>Teams navigating change</li>
+        </ul>
+      </div>
+      <div class="sb">
+        <p class="sb-lbl">Past Audiences</p>
+        <ul class="sb-list">
+          <li>Fortune 500 leadership teams</li>
+          <li>Healthcare workforce summits</li>
+          <li>Women in leadership conferences</li>
+          <li>Corporate transition programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="takeaways">
+  <span class="ey">What audiences walk away with</span>
+  <div class="ta-grid">
+    <div class="ta-card" data-n="01"><div class="ta-n">01</div><p class="ta-t">Permission to move forward before they feel ready — and a framework for doing it without abandoning what matters.</p></div>
+    <div class="ta-card" data-n="02"><div class="ta-n">02</div><p class="ta-t">A practical approach to navigating workplace transition, personal loss, and uncertainty — at the same time, in real life.</p></div>
+    <div class="ta-card" data-n="03"><div class="ta-n">03</div><p class="ta-t">The difference between waiting for clarity and building something you can adjust. One leaves you with nothing to work with.</p></div>
+    <div class="ta-card" data-n="04"><div class="ta-n">04</div><p class="ta-t">Language for the thing they've been feeling but couldn't say out loud — and the relief of hearing someone say it first.</p></div>
+    <div class="ta-card" data-n="05"><div class="ta-n">05</div><p class="ta-t">One concrete next action they can take before they leave the room. Not a life plan. One thing. That's how it starts.</p></div>
+    <div class="ta-card" data-n="06"><div class="ta-n">06</div><p class="ta-t">The felt experience of being in a room with someone who has deep thought, surface level humor, and means every word of both.</p></div>
+  </div>
+</div>
+
+<div class="formats">
+  <span class="ey ey-lt">How Therese works with you</span>
+  <div class="formats-grid">
+    <div class="format-card">
+      <div class="format-label">01</div>
+      <p class="format-name">Keynote</p>
+      <p class="format-desc">Fumbling Forward in full — customized to your audience, your event theme, and what your people are navigating right now. 45–60 minutes.</p>
+    </div>
+    <div class="format-card">
+      <div class="format-label">02</div>
+      <p class="format-name">Workshop</p>
+      <p class="format-desc">A deeper, interactive experience that moves from listening to doing. Teams leave with a specific plan for what's next — not just inspiration.</p>
+    </div>
+    <div class="format-card">
+      <div class="format-label">03</div>
+      <p class="format-name">Panel &amp; Virtual</p>
+      <p class="format-desc">Available for panel discussions, virtual keynotes, and hybrid events. Therese brings the same energy and specificity to every format.</p>
+    </div>
+  </div>
+</div>
+
+<div class="kn-cta">
+  <p>Every engagement starts with a conversation. No pressure — just a real talk about whether this is the right fit.</p>
+  <a href="#contact" class="btn btn-ol-lt">Start the Conversation</a>
+</div>
+
+<div class="divider"></div>
+
+<div class="inquiry-band" id="contact">
+  <span class="ey ey-lt">Book Therese</span>
+  <h2 style="font-size:clamp(34px,4vw,58px);font-weight:300;line-height:1.07;color:var(--L);max-width:560px;margin-bottom:16px">
+    Every engagement starts with a conversation.<br><em style="font-style:italic;color:var(--M)"></em>
+  </h2>
+  <div class="rule rule-lt"></div>
+  <p class="prose prose-lt" style="max-width:460px;font-size:17px">Tell Therese about your event and your people. She'll tell you honestly whether Fumbling Forward is the right fit — and if it's not, she'll say that too.</p>
+  <div class="inq-grid">
+    <div class="inq-l">
+      <h3 class="inq-hed">Your audience is<br><em>already waiting.</em></h3>
+      <div class="rule rule-lt"></div>
+      <p class="prose prose-lt" style="font-size:17px">Therese responds to every inquiry within 48 hours.</p>
+      <div class="inq-detail">
+        <div class="inq-row"><span class="inq-lbl">Response</span><span class="inq-val">Within 48 hours</span></div>
+        <div class="inq-row"><span class="inq-lbl">Email</span><span class="inq-val">hello@theresemarzouk.com</span></div>
+        <div class="inq-row"><span class="inq-lbl">Format</span><span class="inq-val">In person · Virtual · Hybrid</span></div>
+      </div>
+      <a href="#" class="mk">↓ &nbsp; Download Media Kit</a>
+    </div>
+    <div class="inq-r">
+      <form id="inquiry" onsubmit="handleSub(event)">
+        <div class="fr-2">
+          <div class="fg"><label class="fl">First Name</label><input type="text" class="fi" placeholder="First name" required></div>
+          <div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" placeholder="Last name" required></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Organization</label><input type="text" class="fi" placeholder="Company or org" required></div>
+          <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="your@email.com" required></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Event Date</label><input type="text" class="fi" placeholder="Approximate date"></div>
+          <div class="fg"><label class="fl">Audience Size</label><input type="text" class="fi" placeholder="Estimated attendees"></div>
+        </div>
+        <div class="fr-2">
+          <div class="fg"><label class="fl">Event Format</label>
+            <select class="fs"><option value="">Select format</option><option>In Person</option><option>Virtual</option><option>Hybrid</option></select>
+          </div>
+          <div class="fg"><label class="fl">Presentation Type</label>
+            <select class="fs"><option value="">Select type</option><option>Keynote</option><option>Workshop</option><option>Panel</option><option>Other</option></select>
+          </div>
+        </div>
+        <div class="fg"><label class="fl">What are your people navigating right now?</label><textarea class="ft" placeholder="The more specific you are, the better Therese can serve your audience." required></textarea></div>
+        <div class="fg"><label class="fl">How did you hear about Therese?</label><input type="text" class="fi" placeholder="Referral, search, social..."></div>
+        <button type="submit" class="fsub">Send Inquiry →</button>
+      </form>
+      <div id="success">✓ &nbsp; Message received. Therese will be in touch within 48 hours.</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="ft-brand">Therese <b>Marzouk</b></span>
+  <div class="ft-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="book.html">Book Therese</a><a href="proof.html">Social Proof</a><a href="blog.html">Field Notes</a></div>
+  <p class="ft-copy">© 2026 Therese Marzouk · All rights reserved · Keynote Speaker</p>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mob');
+if(ham&&mob){
+  ham.addEventListener('click',()=>mob.classList.toggle('open'));
+  document.addEventListener('click',e=>{if(!ham.contains(e.target)&&!mob.contains(e.target))mob.classList.remove('open')});
+}
+window.addEventListener('scroll',()=>{
+  const n=document.getElementById('nav');
+  if(n)n.style.boxShadow=window.scrollY>20?'0 2px 18px rgba(30,40,40,.1)':'none';
+});
+function cm(){if(mob)mob.classList.remove('open')}
+function handleSub(e){
+  e.preventDefault();
+  const f=document.getElementById('inquiry');
+  const s=document.getElementById('success');
+  if(f)f.style.display='none';
+  if(s)s.style.display='block';
+}
+</script>
+</body>
+</html>
