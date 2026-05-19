@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field Notes — Therese Marzouk</title>
+<title>The Keynote — Therese Marzouk</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -112,37 +112,42 @@ footer{background:var(--F);padding:48px var(--g) 32px}
   .fr-2{grid-template-columns:1fr}
 }
 
-.blog-hero{background:var(--F);padding:90px var(--g) 64px}
-.blog-hero h1{font-size:clamp(40px,5.5vw,78px);font-weight:300;line-height:1.05;color:var(--L);max-width:680px}
-.blog-hero h1 em{font-style:italic;color:var(--M)}
-.blog-intro{font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--AP);margin-top:20px;line-height:1.7;max-width:460px}
-.blog-grid{padding:72px var(--g);background:var(--L);display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start}
-.post-featured{border-top:3px solid var(--M);padding-bottom:36px;margin-bottom:36px;border-bottom:1px solid rgba(30,40,40,.1)}
-.post-tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--M);margin-bottom:10px;display:block;margin-top:20px}
-.post-title{font-size:clamp(22px,2.8vw,34px);font-weight:300;line-height:1.15;color:var(--F);margin-bottom:12px;text-decoration:none;display:block}
-.post-title:hover{color:var(--M)}
-.post-excerpt{font-size:17px;font-weight:300;font-style:italic;color:var(--F);line-height:1.7;margin-bottom:14px}
-.post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)}
-.post-card{padding:22px 0;border-bottom:1px solid rgba(30,40,40,.08)}
-.post-card:first-child{border-top:1px solid rgba(30,40,40,.08)}
-.post-card-tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px}
-.post-card-title{font-size:21px;font-weight:300;color:var(--F);line-height:1.25;margin-bottom:8px;text-decoration:none;display:block}
-.post-card-title:hover{color:var(--M)}
-.post-card-excerpt{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.65;margin-bottom:8px}
-.blog-sidebar{}
-.sb-mod{background:white;border-top:2px solid var(--M);padding:24px;margin-bottom:18px;box-shadow:0 2px 12px rgba(30,40,40,.04)}
-.sb-mod-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--M);margin-bottom:12px;display:block}
-.sb-mod-text{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.6;margin-bottom:14px}
-.topic-list{display:flex;flex-direction:column;gap:0}
-.topic-link{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--F);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(30,40,40,.07);transition:color .2s}
-.topic-link:hover{color:var(--M)}
-.topic-link:last-child{border:none}
-.blog-subscribe{background:var(--NP);padding:64px var(--g)}
-.blog-subscribe p{font-size:clamp(19px,2.5vw,26px);font-weight:300;font-style:italic;color:var(--L);max-width:520px;line-height:1.5;margin-bottom:12px}
-.blog-subscribe-note{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP);margin-bottom:28px}
-.blog-also{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP);margin-top:20px;line-height:1.65}
-.blog-also a{color:var(--L);text-decoration:none;border-bottom:1px solid rgba(245,236,226,.3)}
-@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.kn-hero{background:var(--F);padding:90px var(--g) 72px}
+.kn-grid{display:grid;grid-template-columns:3fr 2fr;gap:52px;align-items:start;margin-top:40px}
+.kn-hed{font-family:var(--display);font-size:clamp(60px,8vw,110px);letter-spacing:.04em;line-height:.95;color:var(--L)}
+.kn-hed em{color:var(--M);font-family:var(--display);font-style:normal}
+.kn-sub{font-family:var(--mono);font-size:13px;letter-spacing:.11em;text-transform:uppercase;color:var(--AP);margin:16px 0 26px;line-height:1.6}
+.kn-desc{font-size:19px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.8;margin-bottom:14px}
+.kn-desc strong{font-style:normal;color:var(--L);font-weight:600}
+.sb{background:var(--NP);padding:22px;margin-bottom:12px}
+.sb-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--L);margin-bottom:12px}
+.sb-list{list-style:none}
+.sb-list li{font-size:16px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.6;padding:6px 0;border-bottom:1px solid rgba(245,236,226,.06)}
+.sb-list li:last-child{border:none}
+.sb-list li::before{content:'→ ';color:var(--M);font-style:normal}
+.takeaways{padding:76px var(--g);background:var(--L)}
+.ta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.ta-card{background:#fff;border-top:2px solid var(--M);padding:24px;box-shadow:0 2px 12px rgba(30,40,40,.05);position:relative;overflow:hidden}
+.ta-card::before{content:attr(data-n);position:absolute;bottom:-8px;right:8px;font-family:var(--display);font-size:72px;color:rgba(30,40,40,.04);line-height:1;pointer-events:none}
+.ta-n{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--M);letter-spacing:.1em;margin-bottom:8px}
+.ta-t{font-size:17px;font-weight:300;font-style:italic;color:var(--F);line-height:1.55}
+.formats{background:var(--DK);padding:64px var(--g)}
+.formats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.format-card{border:1px solid rgba(245,236,226,.15);padding:28px}
+.format-n{font-family:var(--display);font-size:36px;letter-spacing:.04em;color:var(--M);margin-bottom:8px}
+.format-name{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--L);margin-bottom:14px}
+.format-desc{font-size:16px;font-weight:300;font-style:italic;color:var(--AP);line-height:1.65}
+.formats-close{font-size:17px;font-weight:300;font-style:italic;color:var(--AP);margin-top:32px;line-height:1.65;max-width:580px}
+.formats-close a{color:var(--L);text-decoration:none;border-bottom:1px solid rgba(245,236,226,.4)}
+.kn-cta{background:var(--V);padding:52px var(--g);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.kn-cta p{font-size:clamp(18px,2.5vw,26px);font-style:italic;font-weight:300;color:var(--L);max-width:460px}
+@media(max-width:900px){
+  .kn-grid{grid-template-columns:1fr}
+  .ta-grid{grid-template-columns:1fr 1fr}
+  .formats-grid{grid-template-columns:1fr}
+  .kn-cta{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:580px){.ta-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -152,9 +157,9 @@ footer{background:var(--F);padding:48px var(--g) 32px}
   <ul class="nav-ul">
     <li><a href="index.html" onclick="cm()">Home</a></li>
 <li><a href="about.html" onclick="cm()">About</a></li>
-<li><a href="keynote.html" onclick="cm()">Keynote</a></li>
+<li><a href="keynote.html" class="active" onclick="cm()">Keynote</a></li>
 <li><a href="receipts.html" onclick="cm()">Receipts</a></li>
-<li><a href="blog.html" class="active" onclick="cm()">Field Notes</a></li>
+<li><a href="blog.html" onclick="cm()">Field Notes</a></li>
 
     <li><a href="keynote.html#contact" class="nav-book" onclick="cm()">Book Therese</a></li>
   </ul>
@@ -171,79 +176,79 @@ footer{background:var(--F);padding:48px var(--g) 32px}
 </div>
 <div class="page-wrap">
 
-<div class="blog-hero">
-  <span class="ey ey-mg">Field Notes</span>
-  <h1>Short pieces on change, work,<br>and <em>figuring it out as you go.</em></h1>
-  <p class="blog-intro">Not advice. Mostly notes from the middle of things.</p>
-</div>
-
-<div class="blog-grid">
-  <div>
-    <div class="post-featured">
-      <span class="post-tag">Most Read &nbsp;·&nbsp; The Avocado Files</span>
-      <a href="#" class="post-title">Day Three</a>
-      <p class="post-excerpt">The avocado has been sitting on the counter for three days. I keep meaning to do something with it. I keep not doing something with it. This is the same week I'm supposed to be making a decision I've been putting off for two months. There's a connection there. I'm not ready to write it yet. But I'm writing this down so I don't lose it.</p>
-      <p class="post-meta">May 2026 &nbsp;·&nbsp; 4 min read &nbsp;&nbsp;<a href="#" style="color:var(--M);text-decoration:none;border-bottom:1px solid var(--M)">Read →</a></p>
+<div class="kn-hero">
+  <span class="ey ey-mg">Signature Keynote</span>
+  <div class="kn-grid">
+    <div>
+      <h1 class="kn-hed">FUMBLING<br><em>FORWARD</em></h1>
+      <p class="kn-sub">Practical ways to stay grounded and move forward through change.</p>
+      <p class="kn-desc">You don't have to feel ready to take the next step. <strong>You just have to take it.</strong></p>
+      <p class="kn-desc">Most people don't get the luxury of pressing pause when life gets difficult. They still have to lead, work, care for others, make decisions — and keep moving while navigating uncertainty, pressure, grief, burnout, or major life changes. Fumbling Forward meets them there. Not where a tidy framework wishes they were.</p>
+      <p class="kn-desc">Not a keynote about toxic positivity. Not a keynote about hustle culture. Therese doesn't tell your people to sit with it. She stands next to them while they figure out what's next.</p>
+      <a href="#contact" class="btn btn-mg" style="margin-top:16px">Start the Conversation</a>
     </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">A short list</span>
-      <a href="#" class="post-card-title">Things That Are Not the Same</a>
-      <p class="post-card-excerpt">Resting and hiding. / Sitting with it and being stuck in it. / Patience and avoidance. / Acceptance and giving up. / Discernment and overthinking. / I keep these on a sticky note. I look at it most days.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">April 2026 &nbsp;·&nbsp; 2 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">On listening</span>
-      <a href="#" class="post-card-title">What People Say in the Parking Lot</a>
-      <p class="post-card-excerpt">The most honest conversations at any corporate training happen in the parking lot afterward. Not in the breakout sessions. Not at the catered lunch. In the parking lot, where someone catches up to you and says the thing they couldn't say in the room. I've been collecting those sentences for years.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">March 2026 &nbsp;·&nbsp; 5 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">On frameworks</span>
-      <a href="#" class="post-card-title">Why I Won't Do the Framework</a>
-      <p class="post-card-excerpt">Every speaker eventually gets asked to turn their keynote into a framework. Five steps. A wheel diagram. An acronym. I keep saying no. Not because frameworks are bad. Because the people I'm speaking to have already tried six of them this year.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">February 2026 &nbsp;·&nbsp; 4 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">Science nerd corner</span>
-      <a href="#" class="post-card-title">Why Your Brain Freezes Under Pressure — And the One Thing That Unfreezes It</a>
-      <p class="post-card-excerpt">It's not weakness. It's neuroscience. When the amygdala hijacks your prefrontal cortex, waiting for clarity is the worst possible strategy. Here's what the research actually says — and it's more actionable than you think.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">January 2026 &nbsp;·&nbsp; 7 min read</p>
-    </div>
-  </div>
-
-  <div class="blog-sidebar">
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">Bring Therese to your event</span>
-      <p class="sb-mod-text">If something she wrote resonated — imagine what she can do in a room with your people for forty minutes.</p>
-      <a href="keynote.html#contact" class="btn btn-mg" style="display:block;text-align:center;font-size:11px;padding:12px 20px">Start the Conversation</a>
-    </div>
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">Topics</span>
-      <div class="topic-list">
-        <a href="#" class="topic-link">The Avocado Files</a>
-        <a href="#" class="topic-link">Resilience &amp; Transition</a>
-        <a href="#" class="topic-link">Workplace Change</a>
-        <a href="#" class="topic-link">Grief &amp; Professional Life</a>
-        <a href="#" class="topic-link">Language &amp; Leadership</a>
-        <a href="#" class="topic-link">Science Nerd Corner</a>
+    <div>
+      <div class="sb">
+        <p class="sb-lbl">Perfect for</p>
+        <ul class="sb-list">
+          <li>Leadership teams managing through restructuring or transition</li>
+          <li>Women's ERGs that want substance over inspiration</li>
+          <li>HR and workforce development initiatives addressing burnout</li>
+          <li>Healthcare, education, and public sector teams</li>
+          <li>Annual conferences — mid-career professionals</li>
+          <li>Offsites during periods of uncertainty or change</li>
+        </ul>
+      </div>
+      <div class="sb">
+        <p class="sb-lbl">Past Audiences</p>
+        <ul class="sb-list">
+          <li>Fortune 500 leadership teams</li>
+          <li>Healthcare workforce summits</li>
+          <li>Women in leadership conferences</li>
+          <li>Corporate transition programs</li>
+        </ul>
       </div>
     </div>
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">On the road</span>
-      <p class="sb-mod-text" style="margin-bottom:0">She writes from hotel rooms, airports, and the occasional rest stop. The dog is fine.</p>
-    </div>
   </div>
 </div>
 
-<div class="blog-subscribe">
-  <p>New notes arrive when there's something worth saying.</p>
-  <p class="blog-subscribe-note">Subscribe and I'll send them when they do. No cadence. No content calendar. Just when it's ready.</p>
-  <a href="#" class="btn btn-ol-lt">Subscribe →</a>
-  <p class="blog-also">Or, if you're here because you're thinking about booking her — <a href="keynote.html#contact">start the conversation.</a></p>
+<div class="takeaways">
+  <span class="ey">What audiences walk away with</span>
+  <div class="ta-grid">
+    <div class="ta-card" data-n="01"><div class="ta-n">01</div><p class="ta-t">Permission to move forward before they feel ready — without abandoning what matters.</p></div>
+    <div class="ta-card" data-n="02"><div class="ta-n">02</div><p class="ta-t">A practical approach to leading and working through transition, loss, and uncertainty — at the same time, in real life.</p></div>
+    <div class="ta-card" data-n="03"><div class="ta-n">03</div><p class="ta-t">Language for the thing they've been feeling but couldn't say out loud — and the relief of hearing someone say it first.</p></div>
+    <div class="ta-card" data-n="04"><div class="ta-n">04</div><p class="ta-t">The difference between sitting with it and being stuck in it — and why one is so much easier to mistake for the other.</p></div>
+    <div class="ta-card" data-n="05"><div class="ta-n">05</div><p class="ta-t">One concrete next action they can take before they leave the room. Not a life plan. One thing. That's how it starts.</p></div>
+    <div class="ta-card" data-n="06"><div class="ta-n">06</div><p class="ta-t">The felt experience of being in a room with someone who has deep thought, surface level humor, and means every word of both.</p></div>
+  </div>
+</div>
+
+<div class="formats">
+  <span class="ey ey-lt">How Therese works with you</span>
+  <div class="formats-grid">
+    <div class="format-card">
+      <div class="format-n">01</div>
+      <p class="format-name">Keynote</p>
+      <p class="format-desc">Fumbling Forward in full. 45 to 60 minutes, customized to your audience, your event theme, and what your people are actually navigating — not what the brochure says they're navigating.</p>
+    </div>
+    <div class="format-card">
+      <div class="format-n">02</div>
+      <p class="format-name">Workshop</p>
+      <p class="format-desc">A longer, more interactive version. Teams stop listening and start working — on the real thing, not a hypothetical. They leave with a specific next step, not a list of takeaways.</p>
+    </div>
+    <div class="format-card">
+      <div class="format-n">03</div>
+      <p class="format-name">Panel, Fireside, Virtual</p>
+      <p class="format-desc">Same voice, same specificity, different format. Therese brings the same room-reading instincts to a Zoom square as she does to a ballroom.</p>
+    </div>
+  </div>
+  <p class="formats-close">Every engagement starts with a conversation. No pitch deck, no pressure — just a real talk about whether this is the right fit. If it isn't, she'll say so. <a href="#contact">Start the conversation →</a></p>
+</div>
+
+<div class="kn-cta">
+  <p>Every engagement is scoped to fit. Nonprofit and education rates available.</p>
+  <a href="#contact" class="btn btn-ol-lt">Start the Conversation</a>
 </div>
 
 <div class="divider"></div>

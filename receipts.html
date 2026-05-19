@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Field Notes — Therese Marzouk</title>
+<title>Receipts — Therese Marzouk</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -112,37 +112,35 @@ footer{background:var(--F);padding:48px var(--g) 32px}
   .fr-2{grid-template-columns:1fr}
 }
 
-.blog-hero{background:var(--F);padding:90px var(--g) 64px}
-.blog-hero h1{font-size:clamp(40px,5.5vw,78px);font-weight:300;line-height:1.05;color:var(--L);max-width:680px}
-.blog-hero h1 em{font-style:italic;color:var(--M)}
-.blog-intro{font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--AP);margin-top:20px;line-height:1.7;max-width:460px}
-.blog-grid{padding:72px var(--g);background:var(--L);display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:start}
-.post-featured{border-top:3px solid var(--M);padding-bottom:36px;margin-bottom:36px;border-bottom:1px solid rgba(30,40,40,.1)}
-.post-tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--M);margin-bottom:10px;display:block;margin-top:20px}
-.post-title{font-size:clamp(22px,2.8vw,34px);font-weight:300;line-height:1.15;color:var(--F);margin-bottom:12px;text-decoration:none;display:block}
-.post-title:hover{color:var(--M)}
-.post-excerpt{font-size:17px;font-weight:300;font-style:italic;color:var(--F);line-height:1.7;margin-bottom:14px}
-.post-meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)}
-.post-card{padding:22px 0;border-bottom:1px solid rgba(30,40,40,.08)}
-.post-card:first-child{border-top:1px solid rgba(30,40,40,.08)}
-.post-card-tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--DC);display:block;margin-bottom:6px}
-.post-card-title{font-size:21px;font-weight:300;color:var(--F);line-height:1.25;margin-bottom:8px;text-decoration:none;display:block}
-.post-card-title:hover{color:var(--M)}
-.post-card-excerpt{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.65;margin-bottom:8px}
-.blog-sidebar{}
-.sb-mod{background:white;border-top:2px solid var(--M);padding:24px;margin-bottom:18px;box-shadow:0 2px 12px rgba(30,40,40,.04)}
-.sb-mod-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--M);margin-bottom:12px;display:block}
-.sb-mod-text{font-size:16px;font-weight:300;font-style:italic;color:var(--F);line-height:1.6;margin-bottom:14px}
-.topic-list{display:flex;flex-direction:column;gap:0}
-.topic-link{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--F);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(30,40,40,.07);transition:color .2s}
-.topic-link:hover{color:var(--M)}
-.topic-link:last-child{border:none}
-.blog-subscribe{background:var(--NP);padding:64px var(--g)}
-.blog-subscribe p{font-size:clamp(19px,2.5vw,26px);font-weight:300;font-style:italic;color:var(--L);max-width:520px;line-height:1.5;margin-bottom:12px}
-.blog-subscribe-note{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP);margin-bottom:28px}
-.blog-also{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP);margin-top:20px;line-height:1.65}
-.blog-also a{color:var(--L);text-decoration:none;border-bottom:1px solid rgba(245,236,226,.3)}
-@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.rec-hero{background:var(--F);padding:90px var(--g) 64px}
+.rec-hero h1{font-size:clamp(40px,5.5vw,78px);font-weight:300;line-height:1.05;color:var(--L);max-width:700px}
+.rec-hero h1 em{font-style:italic;color:var(--M)}
+.rec-hero p{font-size:19px;font-weight:300;font-style:italic;color:var(--AP);max-width:560px;margin-top:20px;line-height:1.7}
+.featured-quote{background:var(--V);padding:72px var(--g);position:relative;overflow:hidden}
+.featured-quote::before{content:'"';position:absolute;top:-20px;left:calc(var(--g) - 14px);font-size:220px;color:var(--M);opacity:.1;font-family:var(--serif);line-height:1;pointer-events:none}
+.featured-quote blockquote{max-width:680px;font-size:clamp(22px,3vw,34px);font-weight:300;font-style:italic;color:var(--L);line-height:1.45;position:relative;z-index:1}
+.featured-quote cite{display:block;margin-top:20px;font-family:var(--mono);font-size:11px;letter-spacing:.13em;color:var(--L);font-style:normal;text-transform:uppercase}
+.testi-grid{padding:72px var(--g);background:var(--L);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tcard{background:#fff;padding:28px;border-left:4px solid var(--M);box-shadow:0 2px 14px rgba(30,40,40,.06)}
+.tcard-quote{font-size:19px;font-style:italic;font-weight:300;color:var(--F);line-height:1.65;margin-bottom:16px}
+.tcard-name{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--F);margin-bottom:2px}
+.tcard-org{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--DC)}
+.rec-stage-note{background:var(--DK);padding:36px var(--g);display:flex;align-items:center;gap:20px}
+.rec-stage-note p{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--AP);line-height:1.65;max-width:600px}
+.rec-stage-note span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--M);white-space:nowrap}
+.media-band{background:var(--F);padding:64px var(--g)}
+.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.media-card{border:1px solid rgba(245,236,226,.15);padding:24px;display:flex;flex-direction:column;gap:10px}
+.media-type{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--M)}
+.media-title{font-size:18px;font-weight:300;color:var(--L);line-height:1.35}
+.media-outlet{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP)}
+.media-link{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--L);border-bottom:1px solid rgba(245,236,226,.3);text-decoration:none;margin-top:auto;transition:color .2s}
+.media-link:hover{color:var(--M);border-color:var(--M)}
+@media(max-width:900px){
+  .testi-grid{grid-template-columns:1fr}
+  .media-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:580px){.media-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -153,8 +151,8 @@ footer{background:var(--F);padding:48px var(--g) 32px}
     <li><a href="index.html" onclick="cm()">Home</a></li>
 <li><a href="about.html" onclick="cm()">About</a></li>
 <li><a href="keynote.html" onclick="cm()">Keynote</a></li>
-<li><a href="receipts.html" onclick="cm()">Receipts</a></li>
-<li><a href="blog.html" class="active" onclick="cm()">Field Notes</a></li>
+<li><a href="receipts.html" class="active" onclick="cm()">Receipts</a></li>
+<li><a href="blog.html" onclick="cm()">Field Notes</a></li>
 
     <li><a href="keynote.html#contact" class="nav-book" onclick="cm()">Book Therese</a></li>
   </ul>
@@ -171,79 +169,97 @@ footer{background:var(--F);padding:48px var(--g) 32px}
 </div>
 <div class="page-wrap">
 
-<div class="blog-hero">
-  <span class="ey ey-mg">Field Notes</span>
-  <h1>Short pieces on change, work,<br>and <em>figuring it out as you go.</em></h1>
-  <p class="blog-intro">Not advice. Mostly notes from the middle of things.</p>
+<div class="rec-hero">
+  <span class="ey ey-mg">Receipts</span>
+  <h1>What people say<br><em>after she leaves the stage.</em></h1>
+  <p>The most important thing about a speaker isn't what they say on stage. It's what people say in the parking lot afterward. Here's what they've been saying.</p>
 </div>
 
-<div class="blog-grid">
-  <div>
-    <div class="post-featured">
-      <span class="post-tag">Most Read &nbsp;·&nbsp; The Avocado Files</span>
-      <a href="#" class="post-title">Day Three</a>
-      <p class="post-excerpt">The avocado has been sitting on the counter for three days. I keep meaning to do something with it. I keep not doing something with it. This is the same week I'm supposed to be making a decision I've been putting off for two months. There's a connection there. I'm not ready to write it yet. But I'm writing this down so I don't lose it.</p>
-      <p class="post-meta">May 2026 &nbsp;·&nbsp; 4 min read &nbsp;&nbsp;<a href="#" style="color:var(--M);text-decoration:none;border-bottom:1px solid var(--M)">Read →</a></p>
-    </div>
+<div class="featured-quote">
+  <blockquote>
+    "She had people laughing, crying, and leaving with big hearts wanting to do more in life — all in the same forty minutes. You could feel it in the room before she even finished."
+    <cite>— Event Organizer &nbsp;·&nbsp; Corporate Leadership Conference</cite>
+  </blockquote>
+</div>
 
-    <div class="post-card">
-      <span class="post-card-tag">A short list</span>
-      <a href="#" class="post-card-title">Things That Are Not the Same</a>
-      <p class="post-card-excerpt">Resting and hiding. / Sitting with it and being stuck in it. / Patience and avoidance. / Acceptance and giving up. / Discernment and overthinking. / I keep these on a sticky note. I look at it most days.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">April 2026 &nbsp;·&nbsp; 2 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">On listening</span>
-      <a href="#" class="post-card-title">What People Say in the Parking Lot</a>
-      <p class="post-card-excerpt">The most honest conversations at any corporate training happen in the parking lot afterward. Not in the breakout sessions. Not at the catered lunch. In the parking lot, where someone catches up to you and says the thing they couldn't say in the room. I've been collecting those sentences for years.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">March 2026 &nbsp;·&nbsp; 5 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">On frameworks</span>
-      <a href="#" class="post-card-title">Why I Won't Do the Framework</a>
-      <p class="post-card-excerpt">Every speaker eventually gets asked to turn their keynote into a framework. Five steps. A wheel diagram. An acronym. I keep saying no. Not because frameworks are bad. Because the people I'm speaking to have already tried six of them this year.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">February 2026 &nbsp;·&nbsp; 4 min read</p>
-    </div>
-
-    <div class="post-card">
-      <span class="post-card-tag">Science nerd corner</span>
-      <a href="#" class="post-card-title">Why Your Brain Freezes Under Pressure — And the One Thing That Unfreezes It</a>
-      <p class="post-card-excerpt">It's not weakness. It's neuroscience. When the amygdala hijacks your prefrontal cortex, waiting for clarity is the worst possible strategy. Here's what the research actually says — and it's more actionable than you think.</p>
-      <p class="post-meta" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--DC)">January 2026 &nbsp;·&nbsp; 7 min read</p>
-    </div>
+<div class="testi-grid">
+  <div class="tcard">
+    <p class="tcard-quote">"She made me laugh, cry, and feel motivated all in one talk. That's how you know you have something special."</p>
+    <p class="tcard-name">Conference Chair</p>
+    <p class="tcard-org">Women's Leadership Summit</p>
   </div>
-
-  <div class="blog-sidebar">
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">Bring Therese to your event</span>
-      <p class="sb-mod-text">If something she wrote resonated — imagine what she can do in a room with your people for forty minutes.</p>
-      <a href="keynote.html#contact" class="btn btn-mg" style="display:block;text-align:center;font-size:11px;padding:12px 20px">Start the Conversation</a>
-    </div>
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">Topics</span>
-      <div class="topic-list">
-        <a href="#" class="topic-link">The Avocado Files</a>
-        <a href="#" class="topic-link">Resilience &amp; Transition</a>
-        <a href="#" class="topic-link">Workplace Change</a>
-        <a href="#" class="topic-link">Grief &amp; Professional Life</a>
-        <a href="#" class="topic-link">Language &amp; Leadership</a>
-        <a href="#" class="topic-link">Science Nerd Corner</a>
-      </div>
-    </div>
-    <div class="sb-mod">
-      <span class="sb-mod-lbl">On the road</span>
-      <p class="sb-mod-text" style="margin-bottom:0">She writes from hotel rooms, airports, and the occasional rest stop. The dog is fine.</p>
-    </div>
+  <div class="tcard">
+    <p class="tcard-quote">"People left differently than they came in. I've seen a lot of speakers. That's not something you can manufacture."</p>
+    <p class="tcard-name">VP of People Operations</p>
+    <p class="tcard-org">Fortune 500</p>
+  </div>
+  <div class="tcard">
+    <p class="tcard-quote">"She stayed long after she was done — kept talking to people, answering questions. That's not standard. That's everything."</p>
+    <p class="tcard-name">ERG Program Lead</p>
+    <p class="tcard-org">Annual Conference</p>
+  </div>
+  <div class="tcard">
+    <p class="tcard-quote">"I've been looking for someone who could talk about resilience without making it feel like a self-help lecture. She's the one."</p>
+    <p class="tcard-name">Director of Workforce Development</p>
+    <p class="tcard-org">Healthcare Organization</p>
+  </div>
+  <div class="tcard">
+    <p class="tcard-quote">"Our team was in the middle of a really hard transition. She made everyone feel seen AND capable in the same breath."</p>
+    <p class="tcard-name">Chief People Officer</p>
+    <p class="tcard-org">Mid-Size Tech Company</p>
+  </div>
+  <div class="tcard">
+    <p class="tcard-quote">"She doesn't do platitudes. She tells you the truth in a way you can actually use. Our whole team was quoting her the next day."</p>
+    <p class="tcard-name">Head of Learning &amp; Development</p>
+    <p class="tcard-org">Corporate Training Summit</p>
   </div>
 </div>
 
-<div class="blog-subscribe">
-  <p>New notes arrive when there's something worth saying.</p>
-  <p class="blog-subscribe-note">Subscribe and I'll send them when they do. No cadence. No content calendar. Just when it's ready.</p>
-  <a href="#" class="btn btn-ol-lt">Subscribe →</a>
-  <p class="blog-also">Or, if you're here because you're thinking about booking her — <a href="keynote.html#contact">start the conversation.</a></p>
+<div class="rec-stage-note">
+  <span>Coming soon</span>
+  <p>Client logos, post-event survey data, and named case studies are being added as Therese collects them. Every number and logo on this page will be real. None of this is inflated. That's the point.</p>
+</div>
+
+<div class="media-band">
+  <span class="ey ey-lt">Media &amp; Press</span>
+  <div class="media-grid">
+    <div class="media-card">
+      <p class="media-type">Feature Interview</p>
+      <p class="media-title">On navigating uncertainty without waiting for clarity</p>
+      <p class="media-outlet">Workforce Development Quarterly</p>
+      <a href="#" class="media-link">Read the Interview →</a>
+    </div>
+    <div class="media-card">
+      <p class="media-type">Podcast</p>
+      <p class="media-title">The Avocado Rule: Why timing matters more than readiness</p>
+      <p class="media-outlet">The Leadership Lab Podcast</p>
+      <a href="#" class="media-link">Listen Now →</a>
+    </div>
+    <div class="media-card">
+      <p class="media-type">Conference Talk</p>
+      <p class="media-title">Fumbling Forward: Moving through hard seasons at work</p>
+      <p class="media-outlet">Women in Leadership Annual</p>
+      <a href="#" class="media-link">Watch the Talk →</a>
+    </div>
+    <div class="media-card">
+      <p class="media-type">Speaker One-Sheet</p>
+      <p class="media-title">Bio, approved photos, headshots, and booking information</p>
+      <p class="media-outlet">For press &amp; event coordinators</p>
+      <a href="#" class="media-link">Download →</a>
+    </div>
+    <div class="media-card">
+      <p class="media-type">Speaking Reel</p>
+      <p class="media-title">Therese in action — on stage and in the room</p>
+      <p class="media-outlet">Available upon request</p>
+      <a href="keynote.html#contact" class="media-link">Request Reel →</a>
+    </div>
+    <div class="media-card">
+      <p class="media-type">Press Inquiry</p>
+      <p class="media-title">Interviews, quote requests, and media collaboration</p>
+      <p class="media-outlet">Response within 24 hours</p>
+      <a href="keynote.html#contact" class="media-link">Get in Touch →</a>
+    </div>
+  </div>
 </div>
 
 <div class="divider"></div>
@@ -251,7 +267,7 @@ footer{background:var(--F);padding:48px var(--g) 32px}
 <div class="inquiry" id="contact">
   <div class="inq-top">
     <span class="ey ey-lt">Book Therese</span>
-    <h2 class="inq-hed">If your people are in the middle of something hard, let's talk.<br></h2>
+    <h2 class="inq-hed">If your audience is in the middle of something hard, let's talk.<br></h2>
     <div class="rule rule-lt"></div>
     <p class="prose prose-lt" style="font-size:17px;max-width:480px">No pitch deck. No pressure. Just a real talk about whether this is the right fit — and if it isn't, she'll say so.</p>
     <p style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--AP);margin-top:12px">Every inquiry answered within 48 hours. Urgent? Email <a href="mailto:book@theresemarzouk.com" style="color:var(--L)">book@theresemarzouk.com</a> directly.</p>
